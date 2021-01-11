@@ -1,0 +1,37 @@
+{{!< index}}
+
+<section>
+  <h1 style="font-family: 'Libre Franklin', sans-serif;">Peliculas Encontradas</h1>
+
+  
+  <a href="/" class="btn-main">Nueva Busqueda</a><br>
+  <br>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Año</th>
+          <th>Nombre</th>
+          <th>Cover</th>
+          <th>Información</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+         {{#if movies.Search}}
+         {{#each movies.Search}}
+        <tr>
+          <td>{{this.Year}}</td>
+          <td>{{this.Title}}</td>
+          <td><img class="" height="400px" width="300px" src="{{this.Poster}}" alt="imagen"></td>
+          <td><a href="https://www.imdb.com/title/{{this.imdbID}}">Ver en IMDB</a></td>
+        </tr>
+         {{/each}}
+        {{/if}} 
+      </tbody>
+    </table>
+  </div>
+</section>

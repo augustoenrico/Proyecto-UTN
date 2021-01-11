@@ -1,0 +1,11 @@
+{{!< index}}
+<h1>Busca tu pelicula</h1>
+<div class="search-wrapper">
+    <div class="input-holder">
+        <form action="/results" method="GET">
+        <input type="text" name="search" class="search-input" placeholder="Escribe una pelicula" />
+        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+        </form>
+    </div>
+    <span class="close" onclick="searchToggle(this, event);"></span>
+</div>
